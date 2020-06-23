@@ -1,15 +1,18 @@
 let sceneryPicture;
 let picturePerson;
 let scenary;
+let sound;
 
 function preload() {
   sceneryPicture = loadImage("assets/img/cenario/floresta.png");
   picturePerson = loadImage("assets/img/personagem/correndo.png");
+  sound = loadSound("assets/sounds/trilha_jogo.mp3");
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   scenary = new Scenary(sceneryPicture, 3);
+  sound.play();
 }
 
 function draw() {
